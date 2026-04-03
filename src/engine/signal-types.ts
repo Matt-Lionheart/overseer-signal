@@ -232,9 +232,10 @@ export interface SignalLicense {
 
 export const LICENSE_TIERS: Record<LicenseTier, { features: string[]; max_feeds: number }> = {
   base: {
-    max_feeds: 5,
+    max_feeds: 10,
     features: [
-      'OSINT Feed Ingestion',
+      'OSINT Feed Ingestion (Free)',
+      'CISA AIS Government Feed (Free)',
       'IOC Database',
       'IOC Matching Engine',
       'Bloom Filter Lookups',
@@ -245,6 +246,7 @@ export const LICENSE_TIERS: Record<LicenseTier, { features: string[]; max_feeds:
       'IOC Lifecycle Management',
       'Manual IOC Entry',
       'Bulk IOC Import',
+      'Internal Honeypot Feed',
       'REST API',
     ],
   },
@@ -252,8 +254,7 @@ export const LICENSE_TIERS: Record<LicenseTier, { features: string[]; max_feeds:
     max_feeds: Infinity,
     features: [
       'All Base Features',
-      'Commercial Feed Support',
-      'Government Feed Support (CISA AIS)',
+      'Commercial Feed Add-Ons (CrowdStrike, Mandiant)',
       'Unlimited Feeds',
       'Threat Actor Profiling',
       'MITRE ATT&CK TTP Mapping',
